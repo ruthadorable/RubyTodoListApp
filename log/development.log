@@ -1,0 +1,1142 @@
+Started GET "/" for ::1 at 2020-05-23 15:16:10 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (19.9ms)
+Completed 200 OK in 1926ms (Views: 133.3ms)
+
+
+Started GET "/" for ::1 at 2020-05-23 15:18:56 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (9.0ms)
+Completed 200 OK in 802ms (Views: 89.8ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (25.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (20.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTodoLists (20200523132609)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "todo_lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200523132609"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-23 13:26:53.376675"], ["updated_at", "2020-05-23 13:26:53.376675"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/todo_list" for ::1 at 2020-05-23 15:29:11 +0200
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/todo_list"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/todo_lists" for ::1 at 2020-05-23 15:30:26 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 4417ms (Views: 4354.4ms | ActiveRecord: 2.0ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/todo_lists/new" for ::1 at 2020-05-23 15:31:34 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.erb within layouts/application
+  Rendered todo_lists/_form.html.erb (49.9ms)
+  Rendered todo_lists/new.html.erb within layouts/application (87.8ms)
+Completed 200 OK in 370ms (Views: 306.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/todo_lists" for ::1 at 2020-05-23 15:31:59 +0200
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7I/JRn6ruWhAdSaoKrHqALF6nrA8XjG1UeCSge4iKbTmtAF7gjruKVIV/U5Cg47altixXwD5E9gVQzL577gD7w==", "todo_list"=>{"title"=>"Make a todo app", "description"=>""}, "commit"=>"Create Todo list"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Make a todo app"], ["description", ""], ["created_at", "2020-05-23 13:31:59.475612"], ["updated_at", "2020-05-23 13:31:59.475612"]]
+  [1m[35m (22.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/todo_lists/1
+Completed 302 Found in 32ms (ActiveRecord: 23.9ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-23 15:31:59 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 276ms (Views: 199.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists/1/edit" for ::1 at 2020-05-23 15:34:10 +0200
+Processing by TodoListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/edit.html.erb within layouts/application
+  Rendered todo_lists/_form.html.erb (5.0ms)
+  Rendered todo_lists/edit.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 329ms (Views: 277.8ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/todo_lists/1" for ::1 at 2020-05-23 15:34:57 +0200
+Processing by TodoListsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ey9P3oX3abNiybc3G4UBqstLMai6p97IERxf7M0qI5YFcY4SAzhN6q0xbXH8Vo+Lt8uG8Vg5H6zTAzHfneYvQw==", "todo_list"=>{"title"=>"Weekend 23 -24", "description"=>"Make a Todo App in rails"}, "commit"=>"Update Todo list", "id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "todo_lists" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "todo_lists"."id" = ?[0m  [["title", "Weekend 23 -24"], ["description", "Make a Todo App in rails"], ["updated_at", "2020-05-23 13:34:57.222214"], ["id", 1]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/todo_lists/1
+Completed 302 Found in 29ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-23 15:34:57 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 322ms (Views: 261.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists" for ::1 at 2020-05-23 15:35:02 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 304ms (Views: 259.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-23 15:35:06 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 246ms (Views: 204.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists" for ::1 at 2020-05-23 15:35:10 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 237ms (Views: 193.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists/1/edit" for ::1 at 2020-05-23 15:35:12 +0200
+Processing by TodoListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/edit.html.erb within layouts/application
+  Rendered todo_lists/_form.html.erb (6.3ms)
+  Rendered todo_lists/edit.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 296ms (Views: 255.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-23 15:35:22 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 257ms (Views: 210.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists" for ::1 at 2020-05-23 15:35:25 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 243ms (Views: 201.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists" for ::1 at 2020-05-23 15:46:31 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 350ms (Views: 286.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-23 15:46:36 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  Rendered todo_lists/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 271ms (Views: 220.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists" for ::1 at 2020-05-23 15:46:49 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 258ms (Views: 215.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists" for ::1 at 2020-05-23 15:46:54 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 279ms (Views: 227.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTodoItems (20200523134957)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "todo_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "todo_list_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_d913ce1c56"
+FOREIGN KEY ("todo_list_id")
+  REFERENCES "todo_lists" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE  INDEX "index_todo_items_on_todo_list_id" ON "todo_items" ("todo_list_id")[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200523134957"]]
+  [1m[35m (35.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_todo_items_on_todo_list_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_todo_items_on_todo_list_id' AND type='index'
+[0m
+Started GET "/todo_lists/new" for ::1 at 2020-05-23 17:18:54 +0200
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.erb within layouts/application
+  Rendered todo_lists/_form.html.erb (12.0ms)
+  Rendered todo_lists/new.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 364ms (Views: 293.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-05-23 21:20:54 +0200
+Processing by TodoListsController#index as HTML
+Completed 500 Internal Server Error in 21ms
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/models/todo_list.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_many: todo_items
+           ^):
+  
+app/models/todo_list.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/todo_lists_controller.rb:7:in `index'
+Started GET "/todo_lists" for ::1 at 2020-05-23 21:21:02 +0200
+Processing by TodoListsController#index as HTML
+Completed 500 Internal Server Error in 6317ms
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/models/todo_list.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_many: todo_items
+           ^):
+  
+app/models/todo_list.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/todo_lists_controller.rb:7:in `index'
+Started GET "/todo_lists" for ::1 at 2020-05-24 15:48:24 +0200
+Processing by TodoListsController#index as HTML
+Completed 500 Internal Server Error in 7ms
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/models/todo_list.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_many: todo_items
+           ^):
+  
+app/models/todo_list.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/todo_lists_controller.rb:7:in `index'
+Started GET "/todo_lists" for ::1 at 2020-05-24 18:44:56 +0200
+Processing by TodoListsController#index as HTML
+Completed 500 Internal Server Error in 9ms
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/models/todo_list.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_many: todo_items
+           ^):
+  
+app/models/todo_list.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/todo_lists_controller.rb:7:in `index'
+Started GET "/todo_lists/1" for ::1 at 2020-05-24 18:50:46 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 9ms
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/models/todo_list.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_many: todo_items
+           ^):
+  
+app/models/todo_list.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/todo_lists_controller.rb:67:in `set_todo_list'
+Started GET "/todo_lists/1" for ::1 at 2020-05-24 18:52:18 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (822.6ms)
+Completed 500 Internal Server Error in 1227ms (ActiveRecord: 9.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0xad7a7b8>:0xad79648>
+Did you mean?  format
+               formats
+               form_for
+               form_tag
+               formats=
+               form_with
+               fork):
+     7: <div id="todo_items_wrapper">
+     8:   <%= render @todo_list.todo_items %>
+     9: <div id="form">
+    10:   <%= render @todo_list.todo_items/form %>
+    11:   </div>
+    12: </div>
+    13: <p>
+  
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_90953352'
+Started GET "/todo_lists/1" for ::1 at 2020-05-24 18:53:13 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (442.1ms)
+  Rendered todo_lists/show.html.erb within layouts/application (530.1ms)
+Completed 500 Internal Server Error in 865ms (ActiveRecord: 7.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_todo_items_path' for #<#<Class:0x721c278>:0x71def88>
+Did you mean?  todo_list_path):
+    1: <%= form_for([@todo_list,@todo_list.todo_items.build]) do |f| %>
+    2:   <%= f.text_field :content,placeholder: "New Todo" %>
+    3:   <%= f.submit %>
+    4: <% end %>
+  
+app/views/todo_items/_form.html.erb:1:in `_app_views_todo_items__form_html_erb___449535024_85152552'
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_59827200'
+Started GET "/todo_lists/1" for ::1 at 2020-05-24 19:00:08 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (1.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (579.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (673.7ms)
+Completed 500 Internal Server Error in 1057ms (ActiveRecord: 7.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_todo_items_path' for #<#<Class:0xaf6bf18>:0xaf6abe0>
+Did you mean?  todo_list_path):
+    1: <%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
+    2:   <%= f.text_field :content, placeholder: "New Todo" %>
+    3:   <%= f.submit %>
+    4: <% end %>
+  
+app/views/todo_items/_form.html.erb:1:in `_app_views_todo_items__form_html_erb___449535024_92502120'
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_91996548'
+Started GET "/todo_lists/1" for ::1 at 2020-05-24 19:01:05 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (1.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (392.9ms)
+  Rendered todo_lists/show.html.erb within layouts/application (483.7ms)
+Completed 500 Internal Server Error in 779ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_todo_items_path' for #<#<Class:0xaf6bf18>:0xa268b98>
+Did you mean?  todo_list_path):
+    1: <%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
+    2:   <%= f.text_field :content, placeholder: "New Todo" %>
+    3:   <%= f.submit %>
+    4: <% end %>
+  
+app/views/todo_items/_form.html.erb:1:in `_app_views_todo_items__form_html_erb___449535024_86666244'
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_85041180'
+Started GET "/todo_lists/1" for ::1 at 2020-05-24 19:03:40 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (506.6ms)
+  Rendered todo_lists/show.html.erb within layouts/application (597.4ms)
+Completed 500 Internal Server Error in 906ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_todo_items_path' for #<#<Class:0xaf6bf18>:0x6df72c8>
+Did you mean?  todo_list_path):
+    1: <%= form_for([ @todo_list, @todo_list.todo_items.build ]) do |f| %>
+    2:   <%= f.text_field :content, placeholder: "New Todo" %>
+    3:   <%= f.submit %>
+    4: <% end %>
+  
+app/views/todo_items/_form.html.erb:1:in `_app_views_todo_items__form_html_erb___449535024_81078552'
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_80544108'
+Started GET "/todo_lists/1" for ::1 at 2020-05-24 19:53:39 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (8.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (620.1ms)
+  Rendered todo_lists/show.html.erb within layouts/application (723.9ms)
+Completed 500 Internal Server Error in 1076ms (ActiveRecord: 8.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_todo_items_path' for #<#<Class:0xaf6bf18>:0x9584dd8>
+Did you mean?  todo_list_path):
+    1: <%= form_for([ @todo_list, @todo_list.todo_items.build ]) do |f| %>
+    2:   <%= f.text_field :content, placeholder: "New Todo" %>
+    3:   <%= f.submit %>
+    4: <% end %>
+  
+app/views/todo_items/_form.html.erb:1:in `_app_views_todo_items__form_html_erb___449535024_92372568'
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_78391800'
+Started GET "/todo_lists" for ::1 at 2020-05-24 19:53:47 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (1834.0ms)
+Completed 200 OK in 8407ms (Views: 5003.2ms | ActiveRecord: 1699.0ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-24 19:54:05 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (1.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (451.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (518.4ms)
+Completed 500 Internal Server Error in 764ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_todo_items_path' for #<#<Class:0xaf6bf18>:0x99867f0>
+Did you mean?  todo_list_path):
+    1: <%= form_for([ @todo_list, @todo_list.todo_items.build ]) do |f| %>
+    2:   <%= f.text_field :content, placeholder: "New Todo" %>
+    3:   <%= f.submit %>
+    4: <% end %>
+  
+app/views/todo_items/_form.html.erb:1:in `_app_views_todo_items__form_html_erb___449535024_81066324'
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_80493840'
+Started GET "/todo_lists" for ::1 at 2020-05-25 01:16:20 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 479ms (Views: 386.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 01:16:26 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (444.8ms)
+  Rendered todo_lists/show.html.erb within layouts/application (524.6ms)
+Completed 500 Internal Server Error in 772ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_todo_items_path' for #<#<Class:0xc3885d8>:0xb2e5df0>
+Did you mean?  todo_list_path):
+    1: <%= form_for([ @todo_list, @todo_list.todo_items.build ]) do |f| %>
+    2:   <%= f.text_field :content, placeholder: "New Todo" %>
+    3:   <%= f.submit %>
+    4: <% end %>
+  
+app/views/todo_items/_form.html.erb:1:in `_app_views_todo_items__form_html_erb___449535024_80809884'
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_93794820'
+Started GET "/todo_lists/" for ::1 at 2020-05-25 01:20:40 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 390ms (Views: 316.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists/1/edit" for ::1 at 2020-05-25 01:20:47 +0200
+Processing by TodoListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/edit.html.erb within layouts/application
+  Rendered todo_lists/_form.html.erb (9.0ms)
+  Rendered todo_lists/edit.html.erb within layouts/application (72.8ms)
+Completed 200 OK in 445ms (Views: 380.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 01:20:51 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (381.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (447.8ms)
+Completed 500 Internal Server Error in 713ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_todo_items_path' for #<#<Class:0xc3885d8>:0xb36d528>
+Did you mean?  todo_list_path):
+    1: <%= form_for([ @todo_list, @todo_list.todo_items.build ]) do |f| %>
+    2:   <%= f.text_field :content, placeholder: "New Todo" %>
+    3:   <%= f.submit %>
+    4: <% end %>
+  
+app/views/todo_items/_form.html.erb:1:in `_app_views_todo_items__form_html_erb___449535024_94466892'
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_94072776'
+Started GET "/todo_lists/1/edit" for ::1 at 2020-05-25 01:21:26 +0200
+Processing by TodoListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/edit.html.erb within layouts/application
+  Rendered todo_lists/_form.html.erb (8.0ms)
+  Rendered todo_lists/edit.html.erb within layouts/application (98.7ms)
+Completed 200 OK in 565ms (Views: 490.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists/" for ::1 at 2020-05-25 01:21:33 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 412ms (Views: 338.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 01:23:52 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (1.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (381.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (446.8ms)
+Completed 500 Internal Server Error in 693ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_todo_items_path' for #<#<Class:0xc3885d8>:0xb5c8090>
+Did you mean?  todo_list_path):
+    1: <%= form_for([ @todo_list, @todo_list.todo_items.build ]) do |f| %>
+    2:   <%= f.text_field :content, placeholder: "New Todo" %>
+    3:   <%= f.submit %>
+    4: <% end %>
+  
+app/views/todo_items/_form.html.erb:1:in `_app_views_todo_items__form_html_erb___449535024_95262996'
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_95306580'
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 01:26:51 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (146.6ms)
+Completed 500 Internal Server Error in 439ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial todo_items/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/RuthA/railsapp/todo/app/views"
+):
+     7: <div id="todo_items_wrapper">
+     8:   <%= render @todo_list.todo_items %>
+     9:   <div id="form">
+    10:   <%= render "todo_items/form" %>
+    11:   </div>
+    12: </div>
+    13: <p>
+  
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_58756656'
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 01:32:20 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (1.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (159.6ms)
+Completed 500 Internal Server Error in 447ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial todo_items/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/RuthA/railsapp/todo/app/views"
+):
+     7: <div id="todo_items_wrapper">
+     8:   <%= render @todo_list.todo_items %>
+     9:   <div id="form">
+    10:       <%= render "todo_items/form" %>
+    11:   </div>
+    12: </div>
+    13: <p>
+  
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_101240556'
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 01:35:23 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (1.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (392.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (475.7ms)
+Completed 500 Internal Server Error in 788ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_todo_items_path' for #<#<Class:0xc3885d8>:0xa7bd790>
+Did you mean?  todo_list_path):
+    1: <%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
+    2: 	<%= f.text_field :content, placeholder: "New Todo" %>
+    3: 	<%= f.submit %>
+    4: <% end %>
+  
+app/views/todo_items/_form.html.erb:1:in `_app_views_todo_items__form_html_erb___449535024_84328692'
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_87944940'
+Started GET "/todo_lists/" for ::1 at 2020-05-25 01:35:41 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 388ms (Views: 316.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists/new" for ::1 at 2020-05-25 01:35:44 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.erb within layouts/application
+  Rendered todo_lists/_form.html.erb (4.0ms)
+  Rendered todo_lists/new.html.erb within layouts/application (66.8ms)
+Completed 200 OK in 418ms (Views: 354.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_lists" for ::1 at 2020-05-25 01:36:16 +0200
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3h9vabY4n5Kv0wm7BRYfqdIm9ci55WBxMlFe+11HUjDUJKdUSqnI072z0l1tJHtz9YTaJ4VCQhx28v6DXN14aw==", "todo_list"=>{"title"=>"monday 25", "description"=>"Faire les 2 travaux de Orma"}, "commit"=>"Create Todo list"}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "monday 25"], ["description", "Faire les 2 travaux de Orma"], ["created_at", "2020-05-24 23:36:16.371092"], ["updated_at", "2020-05-24 23:36:16.371092"]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/todo_lists/2
+Completed 302 Found in 28ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/todo_lists/2" for ::1 at 2020-05-25 01:36:16 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (1.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (393.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (463.8ms)
+Completed 500 Internal Server Error in 780ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_todo_items_path' for #<#<Class:0xc3885d8>:0x718c038>
+Did you mean?  todo_list_path):
+    1: <%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
+    2: 	<%= f.text_field :content, placeholder: "New Todo" %>
+    3: 	<%= f.submit %>
+    4: <% end %>
+  
+app/views/todo_items/_form.html.erb:1:in `_app_views_todo_items__form_html_erb___449535024_59263548'
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_59532072'
+Started GET "/todo_lists/2" for ::1 at 2020-05-25 01:38:46 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (2.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (76.8ms)
+Completed 500 Internal Server Error in 363ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+...nd=  form_for([@todo_list_path(@todo_list), @todo_list_path(...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected ']', expecting keyword_end
+...th(@todo_list.todo_items.build])) do |f| @output_buffer.safe...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected ']', expecting keyword_end
+app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_62028192'
+Started GET "/todo_lists" for ::1 at 2020-05-25 01:39:02 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 475ms (Views: 392.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists/2" for ::1 at 2020-05-25 01:39:15 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (1.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (69.8ms)
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+...nd=  form_for([@todo_list_path(@todo_list), @todo_list_path(...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected ']', expecting keyword_end
+...th(@todo_list.todo_items.build])) do |f| @output_buffer.safe...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected ']', expecting keyword_end
+app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_35291544'
+Started GET "/todo_lists/" for ::1 at 2020-05-25 01:41:12 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 391ms (Views: 317.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 01:41:38 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (3.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (68.8ms)
+Completed 500 Internal Server Error in 311ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+...nd=  form_for([@todo_list_path(@todo_list), @todo_list_path(...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected ']', expecting keyword_end
+...th(@todo_list.todo_items.build])) do |f| @output_buffer.safe...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected ']', expecting keyword_end
+app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_77893764'
+Started GET "/todo_lists/1/edit" for ::1 at 2020-05-25 01:41:50 +0200
+Processing by TodoListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/edit.html.erb within layouts/application
+  Rendered todo_lists/_form.html.erb (5.0ms)
+  Rendered todo_lists/edit.html.erb within layouts/application (111.7ms)
+Completed 200 OK in 4997ms (Views: 2116.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 01:42:26 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (1.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (77.8ms)
+Completed 500 Internal Server Error in 364ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+...nd=  form_for([@todo_list_path(@todo_list), @todo_list_path(...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected ']', expecting keyword_end
+...th(@todo_list.todo_items.build])) do |f| @output_buffer.safe...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected ']', expecting keyword_end
+app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_95546952'
+Started GET "/todo_lists" for ::1 at 2020-05-25 01:42:28 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (4.0ms)
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 01:42:35 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (1.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+Completed 200 OK in 13301ms (Views: 11796.2ms | ActiveRecord: 1.0ms)
+
+
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (1.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (1779.2ms)
+Completed 500 Internal Server Error in 6129ms (ActiveRecord: 3.0ms)
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+...nd=  form_for([@todo_list_path(@todo_list), @todo_list_path(...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected ']', expecting keyword_end
+...th(@todo_list.todo_items.build])) do |f| @output_buffer.safe...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected ']', expecting keyword_end
+app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_93314664'
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 01:44:05 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (1.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (2.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (78.8ms)
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+...nd=  form_for([@todo_list_path(@todo_list), @todo_list_path(...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...th(@todo_list.todo_items.build)]) do |f| @output_buffer.safe...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_59136972'
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 01:45:16 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (1.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (1.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (96.7ms)
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ')'
+...end=  form_for(@todo_list_path(@todo_list), @todo_list_path(...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...th(@todo_list.todo_items.build) ) do |f| @output_buffer.safe...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ')'
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_98736456'
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 01:47:55 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (1.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (91.8ms)
+Completed 500 Internal Server Error in 373ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting keyword_end
+...end=  form_for @todo_list_path(@todo_list), @todo_list_path(...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...th(@todo_list.todo_items.build) do |f| @output_buffer.safe_a...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting keyword_end
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb___1064367165_86295312'
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 02:02:33 +0200
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (1.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (145.6ms)
+Completed 500 Internal Server Error in 479ms (ActiveRecord: 4.0ms)
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting keyword_end
+...end=  form_for @todo_list_path(@todo_list), @todo_list_path(...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...th(@todo_list.todo_items.build) do |f| @output_buffer.safe_a...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting keyword_end
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb__317105256_55520556'
+Started GET "/todo_lists/" for ::1 at 2020-05-25 02:02:41 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 12850ms (Views: 12773.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists" for ::1 at 2020-05-25 02:03:20 +0200
+Started GET "/todo_lists" for ::1 at 2020-05-25 02:03:20 +0200
+Processing by TodoListsController#index as HTML
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (4.0ms)
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 696ms (Views: 626.5ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 587ms (Views: 457.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 02:03:29 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (1.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (72.8ms)
+Completed 500 Internal Server Error in 318ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ')'
+...nd=  form_for (@todo_list_path(@todo_list), @todo_list_path(...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...th(@todo_list.todo_items.build)) do |f| @output_buffer.safe_...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ')'
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb__317105256_45892284'
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 02:04:25 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (1.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (2.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (86.8ms)
+Completed 500 Internal Server Error in 369ms (ActiveRecord: 2.0ms)
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+...nd=  form_for([@todo_list_path(@todo_list), @todo_list_path(...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...th(@todo_list.todo_items.build)]) do |f| @output_buffer.safe...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb__317105256_57928236'
+Started GET "/todo_lists/" for ::1 at 2020-05-25 02:04:33 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (1259.6ms)
+Completed 200 OK in 7030ms (Views: 6650.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2020-05-25 02:04:49 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.0ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (3.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (68.8ms)
+Completed 500 Internal Server Error in 316ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+...nd=  form_for([@todo_list_path(@todo_list), @todo_list_path(...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...th(@todo_list.todo_items.build)]) do |f| @output_buffer.safe...
+...                               ^
+C:/Users/RuthA/railsapp/todo/app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected '(', expecting ']'
+app/views/todo_items/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/todo_items/_form.html.erb:6: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/todo_lists/show.html.erb:10:in `_app_views_todo_lists_show_html_erb__317105256_94728828'
+Started GET "/pages/home" for ::1 at 2020-05-25 02:15:18 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/pages/home"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/todo_lists" for ::1 at 2020-05-25 02:15:33 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.0ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 4626ms (Views: 3240.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for ::1 at 2020-05-25 02:15:40 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/pages/home"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.3.0) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
